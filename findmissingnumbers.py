@@ -4,9 +4,42 @@ class Solution:
             #return type: list of int
             
             #TODO: Write code below to return an int list with the solution to the prompt.
+            if len(numbers) == 0:
+                 return "Invalid Input"
+            if len(numbers) == 1:
+                 return "None Missing"
+            
+            def findLowestNumber(nums):
+                if len(nums) == 0:
+                    return None 
+                lowest = nums[0]
+                for num in nums: 
+                    if num < lowest: 
+                        lowest = num
+                return lowest
+
+            def findHighestNumber(nums):
+                if len(nums) == 0: 
+                    return None 
+                highest = nums[0]
+                for num in nums: 
+                    if highest > num:
+                        highest = num  
+                return highest 
+            
+            def convertToWhole(nums):
+                hasFloats = any(isinstance(num, float) for num in nums)
+                if hasFloats: 
+                    wholeNums = []
+                    for num in nums: 
+                        if isinstance(num, float):
+                            wholeNums.append(round(num))
+                return wholeNums
+
+            numbers = convertToWhole(numbers)
             numbers.sort()
-            count = numbers[0]
-            highest = numbers[len(numbers)-1]
+            count = findLowestNumber(numbers)
+            highest = findHighestNumber(numbers)
             actualArr = []
             length = highest - count 
             for i in range(length): 
@@ -20,12 +53,12 @@ class Solution:
                       answerArr[answerArrCount] = actualArr[i]
                       answerArrCount = answerArrCount + 1
 
-            # for i in range (len(numbers)):
-            #      if numbers[i] not in actualArr:
-            #           missingNum = 0 
-            #           for j in range(len(actualArr)): 
-            #                if actualArr[j]
-            #           answerArr[answerArrCount] = 
+            # # for i in range (len(numbers)):
+            # #      if numbers[i] not in actualArr:
+            # #           missingNum = 0 
+            # #           for j in range(len(actualArr)): 
+            # #                if actualArr[j]
+            # #           answerArr[answerArrCount] = 
             return answerArr
             pass
 
