@@ -5,12 +5,28 @@ class Solution:
             
             #TODO: Write code below to return an int list with the solution to the prompt.
             numbers.sort()
-            count = 1 
+            count = numbers[0]
+            highest = numbers[len(numbers)-1]
+            actualArr = []
+            length = highest - count 
+            for i in range (length): 
+                actualArr[i] = count 
+                count = count + 1 
+            answerArr = []
+            answerArrCount = 0 
             
-            for i in range (len(numbers)):
-                 if count != numbers[i]:
-                      return count 
-            
+            for i in range(len(actualArr)):
+                 if actualArr[i] not in numbers: 
+                      answerArr[answerArrCount] = actualArr[i]
+                      answerArrCount = answerArrCount + 1
+
+            # for i in range (len(numbers)):
+            #      if numbers[i] not in actualArr:
+            #           missingNum = 0 
+            #           for j in range(len(actualArr)): 
+            #                if actualArr[j]
+            #           answerArr[answerArrCount] = 
+            return answerArr
             pass
 
 def main():
