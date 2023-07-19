@@ -9,7 +9,7 @@ class Solution:
             highest = numbers[len(numbers)-1]
             actualArr = []
             length = highest - count 
-            for i in range (length): 
+            for i in range(length): 
                 actualArr[i] = count 
                 count = count + 1 
             answerArr = []
