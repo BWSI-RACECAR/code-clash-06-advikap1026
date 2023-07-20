@@ -9,7 +9,7 @@ class Solution:
                  return "Invalid input"
             else:
                 min = math.ceil(min(numbers))
-                max = math.ceil(max,numbers)
+                max = math.ceil(max(numbers))
                 for i in range(min, max):
                     ctr = 0
                     for num in numbers:
