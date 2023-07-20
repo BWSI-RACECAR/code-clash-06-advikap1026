@@ -8,7 +8,9 @@ class Solution:
             if len(numbers)==0:
                  return "Invalid input"
             else:
-                for i in range(math.ceil(min(numbers)), math.ceil(max,numbers)):
+                min = math.ceil(min(numbers))
+                max = math.ceil(max,numbers)
+                for i in range(min, max):
                     ctr = 0
                     for num in numbers:
                          if num%1 != 0:
